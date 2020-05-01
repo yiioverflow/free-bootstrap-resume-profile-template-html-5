@@ -10,8 +10,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
-<body>
-<div class="container-fluid">
+<body onload="myFunction()" id="body">
+<div class="container-fluid bg-white text-primary" id="loader">
+    <div class="row d-flex flex-row justify-content-center align-items-center" style="margin-top:10%;min-height:250px;">
+        <div class="row">
+            <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+            <b class="mt-2">   Roopz is reaching you...</b>
+        </div>   
+        
+    </div>       
+</div>
+<div class="container-fluid" style="display: none;" id="root">
     <div class="row p-2">
         <div class="col-md-4 justify-content-center bg-white border-right border-light p-4">
             <div class="row justify-content-center">                
@@ -150,7 +159,7 @@
     </div>
     </div>
 </div>
-<footer class="footer">
+<footer class="footer" id="footer" style="display:none">
     <div class="container">
       <div class="row justify-content-center">
          <span class="text-muted">© 2020 Copyright: <a href="http://roopz.club/"> roopz.club</a></span>
@@ -158,10 +167,19 @@
       
     </div>
   </footer>
-</body>
-<style>
-    body {
-        background: #f0f0f0;
+  <script>
+    var myVar;    
+    function myFunction() {
+      document.getElementById("body").style.background = "#ffffff";
+      myVar = setTimeout(showPage, 2000);
     }
-</style>
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("root").style.display = "block";
+      document.getElementById("footer").style.display = "block";
+      document.getElementById("body").style.background = "#f0f0f0";
+    }
+    </script>  
+</body>
 </html>
