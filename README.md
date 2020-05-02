@@ -6,6 +6,6 @@ Note : I have added one .httacces file in root directory for https => http redir
 
 Screenshot of demo page - 
 
-![ScreenShot](https://{https://ibin.co/5L5t6DqQ0qD5.png})
+![ScreenShot](https://{ibin.co/5L5t6DqQ0qD5.png})
 
 You can see Demo website in following link http://roopz.club.
